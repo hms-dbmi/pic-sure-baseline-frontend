@@ -27,7 +27,7 @@ COPY --from=pic-sure-ui /usr/local/apache2/htdocs/picsureui /usr/local/apache2/h
 
 # then copy overrides
 COPY src/main/webapp/picsureui /usr/local/apache2/htdocs/picsureui/
-COPY src/main/webapp/psamaui /usr/local/apache2/htdocs/psamaui/
+COPY src/main/webapp/psamaui /usr/local/apache2/htdocs/picsureui/psamaui/
 COPY src/main/resources/favicon.ico /usr/local/apache2/htdocs/
 
 COPY horizontal-logo.png ${HTTPD_PREFIX}/htdocs/picsureui/static/logo.png
