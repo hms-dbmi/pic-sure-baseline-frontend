@@ -39,7 +39,7 @@ define(['common/session', 'psamaSettings/settings', 'common/searchParser', 'jque
                                 window.location = sessionStorage.redirection_url;
                             }
                             else {
-                                history.pushState({}, "", "/psamaui/userManagement");
+                                history.pushState({}, "", "/picsureui");
                             }
                         }
                     }.bind(this),
