@@ -1,5 +1,4 @@
 FROM hms-dbmi/pic-sure-hpds-ui:TARGET_BUILD_VERSION AS pic-sure-ui
-FROM hms-dbmi/pic-sure-auth-ui:TARGET_BUILD_VERSION as psama-ui
 FROM httpd:2.4.27-alpine
 
 # Replace virtual host config file with ours
@@ -21,8 +20,7 @@ RUN sed -i '/^#LoadModule socache_shmcb_module modules\/mod_socache_shmcb.so/s/^
 RUN sed -i 's/DirectoryIndex index.html/DirectoryIndex index_03272020.html/' ${HTTPD_PREFIX}/conf/httpd.conf
 RUN mkdir /usr/local/apache2/logs/ssl_mutex
 
-# copy pic-sure-hpds-ui and psama_ui repos
-COPY --from=psama-ui /usr/local/apache2/htdocs/psamaui /usr/local/apache2/htdocs/psamaui
+# copy pic-sure-hpds-ui repo
 COPY --from=pic-sure-ui /usr/local/apache2/htdocs/picsureui /usr/local/apache2/htdocs/picsureui
 
 # then copy overrides
