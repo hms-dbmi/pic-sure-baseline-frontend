@@ -1,4 +1,4 @@
-define(['common/session', 'psamaSettings/settings', 'common/searchParser', 'jquery', 'handlebars', 'text!login/login.hbs',
+define(['common/session', 'picSure/psamaSettings', 'common/searchParser', 'jquery', 'handlebars', 'text!login/login.hbs',
         'text!login/not_authorized.hbs', 'psamaui/overrides/login', 'util/notification', 'login/fence_login', "picSure/userFunctions"],
 		function(session, settings, parseQueryString, $, HBS, loginTemplate,
                  notAuthorizedTemplate, overrides, notification, fenceLogin, userFunctions){
