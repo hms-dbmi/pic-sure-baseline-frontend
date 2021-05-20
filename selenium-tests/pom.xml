@@ -303,8 +303,8 @@
 						<!-- <googlechromepath>D://binaries/chromedriver.exe</googlechromepath> -->
 						<geckodriverpath>D://binaries/geckodriver.exe</geckodriverpath>
 						<dirofdownloadedfiles>/tmp/</dirofdownloadedfiles>
-						<username>ATUL_SANAGAR</username>
-						<password>$8stpnqp</password>
+						<username>($GoogleUsername)</username>
+						<password>($GooglePassword)</password>
 						<browserName>firefox</browserName>
 
 					</systemPropertyVariables>
