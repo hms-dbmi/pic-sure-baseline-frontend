@@ -1,4 +1,4 @@
-To Run the regression selenium tests on PCISUREUI, we should have some prerequisites. Please check the below steps.
+To Run the regression selenium tests on PICSUREUI, we should have some prerequisites. Please check the below steps.
 
 
 1.Create Config.properties file, it has mapping of property value with  test data files path 
