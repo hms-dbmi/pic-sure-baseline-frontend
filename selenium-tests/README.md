@@ -1,18 +1,21 @@
 To run the regression Selenium tests on the baseline PICSURE-UI, follow the steps below:
 
+Prereq: The user needs to have Docker installed  (
 
-1. If you are running the Selenium tests against baseline PIC-SURE, the tests are stored in the selenium-tests/src/test/resources/config.properties file  
-   (Atul: Currently there is no name "config.properties.file in this repo - is this correct name?) 
-   If you are running the Selenium tests on your own instance of PIC-SURE, then copy the config.properties file. 
+1.) Clone the XX branch and navigate to the (https://github.com/hms-dbmi/baseline-pic-sure/tree/update-selenium-read.me/selenium-tests/resources/testConfigsInt) (this link will change) 
+
+1. If you are running the Selenium tests against baseline PIC-SURE, the tests are stored in the selenium-tests/src/test/resources/config.properties file.
 
 2. The config.properties file contains the mapping of the property value with the test data files path, which it will run against the test methods. 
 
-3. TestData is stored in baseline-pic-sure\selenium-tests\resources\testConfigs  (Atul: There is no such file name) 
+3. The tests and their expected values are stored in baseline-pic-sure\selenium-tests\resources\testConfigs  (Atul: There is no such file name) 
 
 4. All the test data files have input and expected parameters - Testname, url,authmethod,Text to Search, Expected Patient count etc. 
    (Atul where is this?) 
+   
+   Depending on OS:  Window: download gekodriver / (they need to grab the latest one) (https://github.com/mozilla/geckodriver/releases) 
 
-5. The path to the config.properties file can be configurable. To execute test cases on a different browsers you have to execute following 
+5. Linux: The path to the config.properties file can be configurable. To execute test cases on a different browsers you have to execute following 
   scripts.
   
  To change the permission, for either Google or Firefox, first run: 
@@ -23,7 +26,8 @@ To run the regression Selenium tests on the baseline PICSURE-UI, follow the step
  ```
  chmod 777 ./runchromeheadless.sh or Chmod 777 ./runfirefoxheadless.sh 
  ```
-  
+Windows: (Atul to send to Danielle)  
+
 6. To execute the shell scripts you have to pass the login credentials  
  ```
   ./runchromeheadless.sh <username> <password>	or ./runfirefoxheadless.sh <username> <password>
