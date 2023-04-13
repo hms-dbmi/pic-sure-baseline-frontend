@@ -15,8 +15,10 @@ Prerequisite: Docker must be installed
 6.) All the test data files have input and expected parameters - Testname, url,authmethod,Text to Search, Expected Patient count etc. 
    (Atul where is this?) 
    
-   Depending on OS:  Window: download gekodriver / (they need to grab the latest one) (https://github.com/mozilla/geckodriver/releases) 
-
+7) Depending on OS:  Window: download gekodriver / (they need to grab the latest one) (https://github.com/mozilla/geckodriver/releases) 
+                             Place the gecodriver.exe in Drive D under directory "binaries" (Please create a directory **binaries**)                
+                             
+      
  Linux: The path to the config.properties file can be configurable. To execute test cases on a different browsers you have to execute following 
   scripts.
   
@@ -28,7 +30,15 @@ Prerequisite: Docker must be installed
  ```
  chmod 777 ./runchromeheadless.sh or Chmod 777 ./runfirefoxheadless.sh 
  ```
-Windows: (Atul to send to Danielle)  
+Windows: From the command prompt with selenium-tests directory Run 
+
+mvn test
+
+
+
+
+
+
 
 7.) To execute the shell scripts you have to pass the login credentials  
  ```
