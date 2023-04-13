@@ -15,7 +15,11 @@ Prerequisite: Docker must be installed
 6.) All the test data files have input and expected parameters - Testname, url,authmethod,Text to Search, Expected Patient count etc. 
    (Atul where is this?) 
    
-7) Depending on OS:  Window: download gekodriver / (they need to grab the latest one) (https://github.com/mozilla/geckodriver/releases) 
+7.) For Session debydration implementation, Create directory "binaries" under directry D on Windows. Create a file called sessionvalue.txt
+    Now Login to PICSURE UI, Click on Userprofile and get a token. Paste this token in sessionvalue.txt
+     
+
+8.)Depending on OS:  Window: download gekodriver / (they need to grab the latest one) (https://github.com/mozilla/geckodriver/releases) 
                              Place the gecodriver.exe in Drive D under directory "binaries" (Please create a directory **binaries**)                
                              
       
@@ -24,31 +28,26 @@ Prerequisite: Docker must be installed
   
  To change the permission, for either Google or Firefox, first run: 
  ```
- ./runchromeheadless.sh  or ./runfirefoxheadless.sh 
+ **./runchromeheadless.sh  or ./runfirefoxheadless.sh **
  ```
  and 
  ```
- chmod 777 ./runchromeheadless.sh or Chmod 777 ./runfirefoxheadless.sh 
+ **chmod 777 ./runchromeheadless.sh or Chmod 777 ./runfirefoxheadless.sh **
  ```
 Windows: From the command prompt with selenium-tests directory Run 
 
-mvn test
+**mvn test**
 
 
-
-
-
-
-
-7.) To execute the shell scripts you have to pass the login credentials  
+9.) To execute the shell scripts you have to pass the login credentials  
  ```
   ./runchromeheadless.sh <username> <password>	or ./runfirefoxheadless.sh <username> <password>
  ```
  
-8.) For each environment, such as development, test, or production the values (url, patient count etc.)
+10.) For each environment, such as development, test, or production the values (url, patient count etc.)
    could differ. Therefore, before we run the test automation code, ensure these values get updated correctly, or else the test result will fail.
 
-9.) To view the results of the tests and test the run logs at the working direcrtory, see TestReportSummary.log and BDCpcisureui.log (why is BDC referenced here? I thought there was another repo for BDC? Should this repo only be the baseline tests?) 
+11.) To view the results of the tests and test the run logs at the working direcrtory, see TestReportSummary.log and BDCpcisureui.log (why is BDC referenced here? I thought there was another repo for BDC? Should this repo only be the baseline tests?) 
  
   To change the logfile name and logging level (e.g. INFO,DEBUG,ALL etc) update the log4j.properties file.
   
