@@ -51,8 +51,7 @@ Windows: From the command prompt with selenium-tests directory Run
 10.) For each environment, such as development, test, or production the values (url, patient count etc.)
    could differ. Therefore, before we run the test automation code, ensure these values get updated correctly, or else the test result will fail.
 
-11.) To view the results of the tests and test the run logs at the working direcrtory, see TestReportSummary.log and BDCpcisureui.log (why is BDC referenced here? I thought there was another repo for BDC? Should this repo only be the baseline tests?) 
+11.) To view the results of the tests and test the run logs at the working direcrtory, see TestReportSummary.log and Picsureui.log (why is BDC referenced here? I thought there was another repo for BDC? Should this repo only be the baseline tests?) 
  
-  To change the logfile name and logging level (e.g. INFO,DEBUG,ALL etc) update the log4j.properties file.
-  
+ 
   
