@@ -16,7 +16,11 @@ Prerequisite: Docker must be installed
    (Atul where is this?) 
    
 7.) For Session debydration implementation, Create directory "binaries" under directry D on Windows. Create a file called sessionvalue.txt
-    Now Login to PICSURE UI, Click on Userprofile and get a token. Paste this token in sessionvalue.txt
+    Now Login to PICSURE UI, Click on Userprofile and get a token. 
+    ![image](https://user-images.githubusercontent.com/31655973/232036586-705825ea-041d-4fc8-a304-778ec889e9e4.png)
+
+      
+    Paste this token in sessionvalue.txt
      
 
 8.)Depending on OS:  Window: download gekodriver / (they need to grab the latest one) (https://github.com/mozilla/geckodriver/releases) 
