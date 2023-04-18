@@ -42,7 +42,8 @@ public abstract class Testplan {
 		}
 		if (testPlan.get("name") == null) {
 			throw new Exception("Invalid Test Plan - Name field is null");
-		} else if (testPlan.get("url") == null) {
+		} 
+		else if (testPlan.get("url") == null) {
 			throw new Exception("Invalid Test Plan - url field is null");
 		}
 		/*
@@ -296,6 +297,11 @@ public abstract class Testplan {
 	}
 
 	public void verifyHoverOverSubjectTooltip(Reporter reporter) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void verifySessionDehydration(Reporter reporter) throws InterruptedException, Exception {
 		// TODO Auto-generated method stub
 		
 	}
