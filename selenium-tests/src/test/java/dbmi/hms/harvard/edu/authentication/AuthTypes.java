@@ -82,15 +82,12 @@ try {
 			
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(signinButton))).click();
 						
-			/*Actions actions = new Actions(driver);
-	    
-			actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
-		*/    
+		    
 		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(IAgree))).click();
 		    
 		    File IAgreeScreen = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 				
-		    //((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		
 		    FileUtils.copyFile(IAgreeScreen, new File("IAgree.png"));
 		    
 		    
@@ -139,83 +136,35 @@ try {
 			
 			System.out.println("**********************Login with  Google account***************");
 			String usernamebox = ".//input[@type='email']";
-		//	By nextButtonUser = By.xpath(".//*[@id='identifierNext']");
+			String nextButtonUser =".//*[@id='identifierNext']";
 			String passwordbox = ".//input[@type='password']";
-		//	String nextButtonPass = ".//*[@id='passwordNext']";
+			String nextButtonPass = ".//*[@id='passwordNext']";
 			String submitbutton = "//*[@id='ctl00_ContentPlaceHolder1_SubmitButton']";
 	        
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 			Thread.sleep(5000);
 			wait = new WebDriverWait(driver, 40);
-		/*	try{*/
-			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'LOGIN WITH GOOGLE')]")));
-			Actions test = new Actions(driver);
-			WebElement btn = driver.findElement(By.xpath("//span[contains(text(),'LOGIN WITH GOOGLE')]"));
-			test.doubleClick(btn).perform();
+		
+			File googleLogin = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			
-			/*Action seriesOfActions = builder
-					.moveToElement(driver.findElement(By.xpath("//span[contains(text(),'LOGIN WITH GOOGLE')]")))
-					.click().build();
-			*/			
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Login with Google')]"))).click();
+					
 			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	        FileUtils.copyFile(file, new File("screenshotclickLogin.png"));
-			
-			/*}
-			
-			catch(org.openqa.selenium.TimeoutException t)
-			
-			{
-				File file=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-				FileUtils.copyFile(file, new File("D:\\picsure\\screenshot.png"));				
-				throw(t);
-					
-			}*/
-			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(usernamebox))).sendKeys(username);
-		/*	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(usernamebox)));
-			WebElement Email = driver.findElement(By.xpath(usernamebox));
-			Actions email = new Actions(driver);
-			email.sendKeys(Email, username);
-		*/	
-			
-			
-	        //test.click(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(usernamebox)))).sendKeys(usernamebox);
-			
-			//File file=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
 			File capUserName = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(capUserName, new File("usernamescreenshot.png"));
-			
-			WebElement NextUserNamebtn = driver.findElement(By.xpath(".//*[@id='identifierNext']"));			
-			//driver.findElement(By.xpath(nextButtonUser)).click();
-			test.click(NextUserNamebtn).perform();
-			
-			
-	        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(passwordbox))).sendKeys(testPlan.get("password").toString());
+					
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(nextButtonUser))).click();		
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(passwordbox))).sendKeys(password);
 	        
 	        File capPasswd = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(capPasswd, new File("passwordscreenshot.png"));
-			
-			WebElement nextButtonPass = driver.findElement(By.xpath(".//*[@id='passwordNext']"));
-			
-	        //driver.findElement(By.xpath(nextButtonPass)).click();
-	        test.click(nextButtonPass).perform();
-	        Thread.sleep(3000);
-	        File checkLogin = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(checkLogin, new File("checkLoginScreen.png"));
-			
 			Thread.sleep(7000);
 			
-			//Thread.sleep(30000);
-			//driver.findElement(By.xpath("//span[contains(text(),'LOGIN')]")).click();
-			//File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'LOGIN WITH GOOGLE')]"))).click();
-			
-		//	driver.findElement(By.xpath("//span[contains(text(),'LOGIN WITH GOOGLE')]")).click();
-		//	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(passwordbox)));
-			 //Thread.sleep(5000);
-			
+		
 		} catch (SecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
