@@ -1,4 +1,4 @@
- name: This setup the environment for running the automation test scripts
+ name: This test case verifies the validation message for in between text fields
  reporter: ConsoleReporter
  SearchTerm: Vitamin
  TextToSelect: Vitamin E
