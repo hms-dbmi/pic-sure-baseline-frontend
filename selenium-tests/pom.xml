@@ -299,8 +299,8 @@
 				<configuration>
 					<systemPropertyVariables>
 						<pathtoconfigtest>src/test/resources/</pathtoconfigtest>
-						 <googlechromepath>/usr/bin/chromedriver</googlechromepath>
-						<!-- <googlechromepath>D://binaries/chromedriver.exe</googlechromepath> -->
+						 <!-- <googlechromepath>/usr/bin/chromedriver</googlechromepath> -->
+						 <googlechromepath>D://binaries/chromedriver.exe</googlechromepath>
 						<geckodriverpath>D://binaries/geckodriver.exe</geckodriverpath>
 						<dirofdownloadedfiles>/tmp/</dirofdownloadedfiles>
 						<username>($GoogleUsername)</username>
