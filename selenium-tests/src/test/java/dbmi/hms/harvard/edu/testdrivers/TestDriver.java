@@ -105,6 +105,18 @@ public class TestDriver {
 
 	}
 
+	/*@Test(priority = 2)
+
+	public void verify_successful_Login_To_PicsureUI() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verify if user is logged in Picsure UI  is running-------------------------");
+		readFile(configProperties.getProperty("verify.authorization.ofpicsureui"));
+		testPlan.verifySuccessfulLoginPicsureUILaunch(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verify if user is logged in Picsure UI  is completed-----------------------");
+
+	}*/
+	
 	@Test(priority = 2)
 
 	public void verify_successful_Loading_sessiondehydration() throws Exception {
@@ -117,7 +129,8 @@ public class TestDriver {
 
 	}
 	
-//@Test (priority=3)
+
+	@Test (priority=3)
 
 	public void verify_QueryBuilder_ByNoValue() throws Exception {
 		LOGGER.info(
@@ -128,8 +141,8 @@ public class TestDriver {
 				"---------------------------------The test case verifyQueryBuilderByNoValue is completed-------------------------");
 
 	}
-	
-//@Test(priority=4)
+
+@Test(priority=4)
 
 	public void verify_QueryBuilder_ByNumericValue_LessThan() throws Throwable {
 		LOGGER.info(
@@ -140,8 +153,9 @@ public class TestDriver {
 				"---------------------------------The test case verifyQueryBuilderByNumericValueLessthan is completed-------------------------");
 
 	}
- 
-//@Test (priority=5)
+
+/* 
+@Test (priority=5)
 
 	public void verify_QueryBuilder_ByNumericValue_GreaterThan() throws Throwable {
 		LOGGER.info(
@@ -153,8 +167,7 @@ public class TestDriver {
 
 	}
 
-
-//@Test (priority=6)
+@Test (priority=6)
 	public void verify_QueryBuilder_ByNumericValue_Between() throws Exception {
 		LOGGER.info(
 				"---------------------------------The test case verifyQueryBuilderByNumericValueBetween is running-------------------------");
@@ -165,7 +178,7 @@ public class TestDriver {
 
 	}
 
-//@Test (priority=7)
+@Test (priority=7)
 
 	public void verify_QueryBuilder_ANDCondition() throws Exception {
 		LOGGER.info(
@@ -180,7 +193,7 @@ public class TestDriver {
 
 	}
 
-//@Test (priority=8)
+@Test (priority=8)
 
 	public void verify_QueryBuilder_Deletion() throws Exception {
 		LOGGER.info(
@@ -193,7 +206,7 @@ public class TestDriver {
 	}
 
 	
-//@Test (priority=9)
+@Test (priority=9)
 
 		public void verify_QueryBuilder_BackButton() throws Exception {
 			LOGGER.info(
@@ -205,7 +218,7 @@ public class TestDriver {
 
 		}
 
-//@Test (priority=10)
+@Test (priority=10)
 
 	public void verify_QueryBuilder_Editing() throws Exception {
 		LOGGER.info(
@@ -216,7 +229,7 @@ public class TestDriver {
 				"---------------------------------The test case verifyQueryBuilderEditing is completed-------------------------");
 	}
 
-//@Test(priority = 11)
+@Test(priority = 11)
 
 	public void verify_QueryBuilder_SearchInvalidData() throws Exception {
 		LOGGER.info(
@@ -229,7 +242,7 @@ public class TestDriver {
 
 	}
 
-//@Test(priority = 12)
+@Test(priority = 12)
 
 	public void verify_QueryBuilder_Search_InCaseSensitivity() throws Exception {
 		
@@ -284,8 +297,8 @@ public class TestDriver {
 						"---------------------------------The test case verify TheLoadedData For MultipleConcetps with AND condition  is completed-------------------------");
 
 			}
-			
-//@Test (priority = 16)
+		
+@Test (priority = 16)
 		public void verifypresenceOfANDLabel() throws Exception {
 			 
 
@@ -296,10 +309,8 @@ public class TestDriver {
 				testPlan.verifyAndLabel(reporter);
 				LOGGER.info(
 						"---------------------------------The test case verify presence of AND LABEL  is completed-------------------------");
-				
+
 			}
-
-
 @Test (priority=17)
 
 			public void verifyQueryBuilder_ByNumericValue_Decimal() throws Exception {
@@ -311,7 +322,7 @@ public class TestDriver {
 						"---------------------------------The test case verifyQueryBuilderByNumericValueDecimal is completed-------------------------");
 
 			}
-/*
+
 @Test(priority=18)
 
 			public void verify_QueryBuilder_ByNumericValue_OutOfRangeValidation() throws Throwable {
@@ -398,7 +409,17 @@ public class TestDriver {
 
 	}
 
-	
+	//@Test (priority=25)
+	public void verify_AutoBDCColumnReport() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case Auto BDC column  is running-------------------------");
+		readFile(configProperties.getProperty("verify.datareportbdccolumn"));
+		testPlan.verifyBDCAutoInclusionColumnReport(reporter);
+		LOGGER.info(
+				"---------------------------------The test auto BDC column is completed-------------------------");
+
+	}
+
 
 	@Test (priority=26)
 	public void verify_dataaccessdashboard() throws Exception {
@@ -412,7 +433,17 @@ public class TestDriver {
 	}
 
 	
-	
+	@Test (priority=27)
+	public void verify_dataaccessExploreButtonOpenAccess() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verifying Explore button  is running-------------------------");
+		readFile(configProperties.getProperty("verify.queryresult.dataaccess.explore"));
+		testPlan.verifyDataaccessExploreOpenAccess(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verifying Explore button  is completed-------------------------");
+
+	}
+
 	@Test (priority=28)
 	public void verify_helpcontactus() throws Exception {
 		LOGGER.info(
@@ -437,13 +468,44 @@ public class TestDriver {
 	}
 
 
+	@Test (priority=30)
+	public void verify_authorized_access_page() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verify  Authorized page loads is running-------------------------");
+		readFile(configProperties.getProperty("verify.bdc.authorizedaccess.pageload"));
+		testPlan.verifyAuthorizedAccessPageload(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verify  Authorized page loads is completed-------------------------");
+
+	}
+
+	
+	
+	@Test (priority=31)
+	public void verify_authorized_NoExportButton_default() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verify  Authorized page doesn't have default Export Button  is running-------------------------");
+		readFile(configProperties.getProperty("verify.bdc.authorizedaccess.pageload.noexportbutton"));
+		testPlan.verifyAuthorizedAccessdefaultNoExportButton(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verify  Authorized page doesn't have default Export Button is completed-------------------------");
+
+	}
 	
 	
 	
-		
+	@Test (priority=32)
+	public void verify_queryscope_study_openaccess() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verify that study should have accessed in open access is running-------------------------");
+		readFile(configProperties.getProperty("verify.bdc.queryscope.study.openaccess"));
+		testPlan.verifyQueryScopeStudyOpenAccess(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verify that study should have accessed in open access is running is completed-------------------------");
+
+	}
+
 	
-	
-		
 	@Test (priority=33)
 	public void verify_queryresult_nearmaxvalue() throws Exception {
 		LOGGER.info(
@@ -455,11 +517,42 @@ public class TestDriver {
 
 	}
 
+	@Test (priority=34)
+	public void verify_queryresult_patientcount_lessthanten() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verify if query result is between 1 to 9 it displays < 10  is running-------------------------");
+		readFile(configProperties.getProperty("verify.bdc.openaccess.patientcountlessthan.tenfeature"));
+		testPlan.verifyOpenAccesspatientcountdiplsyaforQueryResultBetnOnetoNine(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verify if query result is between 1 to 9 it displays < 10 is completed-------------------------");
+
+	}
+
 	
+	@Test (priority=35)
+	public void verify_granted_openaccess() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verify if granted button next to subject is clicked  it opens Authorization page running-------------------------");
+		readFile(configProperties.getProperty("verify.bdc.granted.functionality.openaccess"));
+		testPlan.verifyGrantedFunctionalityOnOpenAccess(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verify if granted button next to subject is clicked  it opens Authorization page is completed-------------------------");
+
+	}	
+
 	
+	@Test (priority=36)
+	public void verify_subject_tooltip() throws Exception {
+		LOGGER.info(
+				"---------------------------------The test case verify hovering over the study displays tool tip with the full name is running-------------------------");
+		readFile(configProperties.getProperty("verify.bdc.subject.hoverover.tooltip"));
+		testPlan.verifyHoverOverSubjectTooltip(reporter);
+		LOGGER.info(
+				"---------------------------------The test case verify hovering over the study displays tool tip with the full name running is completed-------------------------");
+
+	}	
+
 	
-	
-		
 	
 @Test (priority=37)
 	public void verify_logout() throws Exception {
@@ -478,9 +571,9 @@ public class TestDriver {
 
 		reporter.doReport();
 	//	testPlan.closeDriver();
-		System.out.println("PICSUREUI Test Automation Testing is finished...");
+		System.out.println("BDC PICSUREUI Test Automation Testing is finished...");
 		LOGGER.info(
-				"=========================== PICSUREUI Test Automation is completed :Closing the Browser ===========================");
+				"===========================BDC PICSUREUI Test Automation is completed :Closing the Browser ===========================");
 
 	}
 
