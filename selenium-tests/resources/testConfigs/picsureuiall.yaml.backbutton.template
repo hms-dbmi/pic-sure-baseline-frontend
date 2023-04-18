@@ -1,0 +1,6 @@
+ name: This test case verify that clicking back button takes user to one step back 
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
+ SearchTerm: vitamin
+ TextToSelect: Vitamin A
+ NumericValueLess: 200

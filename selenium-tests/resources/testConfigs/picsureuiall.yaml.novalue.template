@@ -1,0 +1,6 @@
+ name: This test case verify that query result works fine with NO value option.
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
+ SearchTerm: PHOSPHORUS
+ TextToSelect: PHOSPHORUS_mg
+ PatientCount: 9972

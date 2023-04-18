@@ -1,0 +1,6 @@
+ name: The test case verifies  Querybuilder doesn't search invalid data, displays message.
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
+ SearchTerm: InvalidVitamin
+ textToSelect: Vitamin E
+ PatientCount: 8725

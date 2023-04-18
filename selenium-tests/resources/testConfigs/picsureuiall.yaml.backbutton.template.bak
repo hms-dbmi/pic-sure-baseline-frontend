@@ -1,0 +1,5 @@
+ name: This test case verify that clicking back button takes user to one step back 
+ reporter: ConsoleReporter
+ SearchTerm: vitamin
+ TextToSelect: Vitamin A
+ NumericValueLess: 200

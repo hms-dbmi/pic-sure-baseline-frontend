@@ -1,0 +1,8 @@
+ name: This setup the environment for running the automation test scripts
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
+ SearchTerm: Vitamin
+ TextToSelect: Vitamin E
+ PatientCount: 2046
+ NumericValue1: 2
+ NumericValue2: 64

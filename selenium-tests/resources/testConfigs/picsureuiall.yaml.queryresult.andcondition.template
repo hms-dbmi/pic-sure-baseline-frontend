@@ -1,0 +1,10 @@
+ name: This setup the environment for running the automation test scripts
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
+ SearchTerm: Vitamin E
+ TextToSelect: Vitamin E
+ PatientCount: 1460
+ SearchTermSecond: mean
+ TextToSelectSecond: mean systolic
+ NumericValueLess: 50
+ NumericValueLessSecond: 150

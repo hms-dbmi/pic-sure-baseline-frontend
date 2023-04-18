@@ -1,0 +1,6 @@
+ name: This test case verify the deletion of query result
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
+ SearchTerm: vitamin
+ TextToSelect: Vitamin A
+ NumericValueLess: 200

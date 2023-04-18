@@ -1,0 +1,7 @@
+ name: This setup the environment for running the automation test scripts
+ reporter: ConsoleReporter
+ SearchTerm: Vitamin
+ TextToSelect: Vitamin E
+ PatientCount: 4986
+ NumericValue1: 13
+ NumericValue2: 9

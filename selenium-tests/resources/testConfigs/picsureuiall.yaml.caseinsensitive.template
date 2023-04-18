@@ -1,0 +1,5 @@
+ name: This test case verify that query builder search is case insensitive
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
+ expected: pass
+ SearchTerm: vitamin

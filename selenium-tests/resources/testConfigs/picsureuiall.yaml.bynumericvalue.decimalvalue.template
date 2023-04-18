@@ -1,0 +1,6 @@
+ name: This test case verifies that query builder works fine fro decimal values
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ SearchTerm: Vitamin E
+ TextToSelect: Vitamin E
+ PatientCount: 2160
+ NumericValueLessDecimal: 75.58
