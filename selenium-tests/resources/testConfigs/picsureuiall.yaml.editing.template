@@ -1,4 +1,4 @@
- name: This setup the environment for running the automation test scripts
+ name: This test case verify that editing functionality is working
  url: https://nhanes-dev.hms.harvard.edu/psamaui/login
  reporter: ConsoleReporter
  SearchTerm: vitamin
