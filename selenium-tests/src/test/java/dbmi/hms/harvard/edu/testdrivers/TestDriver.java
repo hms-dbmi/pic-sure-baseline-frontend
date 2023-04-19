@@ -105,17 +105,7 @@ public class TestDriver {
 
 	}
 
-	/*@Test(priority = 2)
 
-	public void verify_successful_Login_To_PicsureUI() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verify if user is logged in Picsure UI  is running-------------------------");
-		readFile(configProperties.getProperty("verify.authorization.ofpicsureui"));
-		testPlan.verifySuccessfulLoginPicsureUILaunch(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verify if user is logged in Picsure UI  is completed-----------------------");
-
-	}*/
 	
 	@Test(priority = 2)
 
@@ -130,7 +120,7 @@ public class TestDriver {
 	}
 	
 
-	@Test (priority=3)
+@Test (priority=3)
 
 	public void verify_QueryBuilder_ByNoValue() throws Exception {
 		LOGGER.info(
@@ -154,7 +144,7 @@ public class TestDriver {
 
 	}
 
-/* 
+ 
 @Test (priority=5)
 
 	public void verify_QueryBuilder_ByNumericValue_GreaterThan() throws Throwable {
@@ -349,7 +339,7 @@ public class TestDriver {
 	}
 
 
-//@Test (priority=20)
+@Test (priority=20)
 
 	public void verify_QueryBuilder_ByNumeric_InBtnValidation_ForTextBox() throws Exception {
 		LOGGER.info(
@@ -361,20 +351,8 @@ public class TestDriver {
 
 	}
 
-//@Test (priority=21)
 
-
-	public void verify_QueryBuilder_Export_Manual_Selection_DataTree() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verifyQueryBuilderExportManualSelectionFromDataTree is running-------------------------");
-		readFile(configProperties.getProperty("verify.queryresult.bynumeric.between.validation.message"));
-		testPlan.verifyQueryBuilderExportManualSelectionFromDataTree(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verifyQueryBuilderExportManualSelectionFromDataTree is completed-------------------------");
-
-	}
-
-	//@Test (priority=22)
+/*	//@Test (priority=22)
 
 	public void verify_QueryBuilder_Restrict_By_Value() throws Exception {
 		LOGGER.info(
@@ -409,40 +387,6 @@ public class TestDriver {
 
 	}
 
-	//@Test (priority=25)
-	public void verify_AutoBDCColumnReport() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case Auto BDC column  is running-------------------------");
-		readFile(configProperties.getProperty("verify.datareportbdccolumn"));
-		testPlan.verifyBDCAutoInclusionColumnReport(reporter);
-		LOGGER.info(
-				"---------------------------------The test auto BDC column is completed-------------------------");
-
-	}
-
-
-	@Test (priority=26)
-	public void verify_dataaccessdashboard() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case dataaccess page load  is running-------------------------");
-		readFile(configProperties.getProperty("verify.queryresult.dataaccess"));
-		testPlan.verifyDataaccessDashboard(reporter);
-		LOGGER.info(
-				"---------------------------------The test case dataaccess page load  is completed-------------------------");
-
-	}
-
-	
-	@Test (priority=27)
-	public void verify_dataaccessExploreButtonOpenAccess() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verifying Explore button  is running-------------------------");
-		readFile(configProperties.getProperty("verify.queryresult.dataaccess.explore"));
-		testPlan.verifyDataaccessExploreOpenAccess(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verifying Explore button  is completed-------------------------");
-
-	}
 
 	@Test (priority=28)
 	public void verify_helpcontactus() throws Exception {
@@ -456,54 +400,7 @@ public class TestDriver {
 	}
 
 
-	@Test (priority=29)
-	public void verify_authorized_access_page_dataexport() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verify  Authorized page displays Data Export button is running-------------------------");
-		readFile(configProperties.getProperty("verify.bdc.authorizedaccess.dataexport"));
-		testPlan.verifyAuthorizedAccessPageDataExport(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verify  Authorized page displays Data Export button is completed-------------------------");
 
-	}
-
-
-	@Test (priority=30)
-	public void verify_authorized_access_page() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verify  Authorized page loads is running-------------------------");
-		readFile(configProperties.getProperty("verify.bdc.authorizedaccess.pageload"));
-		testPlan.verifyAuthorizedAccessPageload(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verify  Authorized page loads is completed-------------------------");
-
-	}
-
-	
-	
-	@Test (priority=31)
-	public void verify_authorized_NoExportButton_default() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verify  Authorized page doesn't have default Export Button  is running-------------------------");
-		readFile(configProperties.getProperty("verify.bdc.authorizedaccess.pageload.noexportbutton"));
-		testPlan.verifyAuthorizedAccessdefaultNoExportButton(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verify  Authorized page doesn't have default Export Button is completed-------------------------");
-
-	}
-	
-	
-	
-	@Test (priority=32)
-	public void verify_queryscope_study_openaccess() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verify that study should have accessed in open access is running-------------------------");
-		readFile(configProperties.getProperty("verify.bdc.queryscope.study.openaccess"));
-		testPlan.verifyQueryScopeStudyOpenAccess(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verify that study should have accessed in open access is running is completed-------------------------");
-
-	}
 
 	
 	@Test (priority=33)
@@ -517,30 +414,7 @@ public class TestDriver {
 
 	}
 
-	@Test (priority=34)
-	public void verify_queryresult_patientcount_lessthanten() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verify if query result is between 1 to 9 it displays < 10  is running-------------------------");
-		readFile(configProperties.getProperty("verify.bdc.openaccess.patientcountlessthan.tenfeature"));
-		testPlan.verifyOpenAccesspatientcountdiplsyaforQueryResultBetnOnetoNine(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verify if query result is between 1 to 9 it displays < 10 is completed-------------------------");
 
-	}
-
-	
-	@Test (priority=35)
-	public void verify_granted_openaccess() throws Exception {
-		LOGGER.info(
-				"---------------------------------The test case verify if granted button next to subject is clicked  it opens Authorization page running-------------------------");
-		readFile(configProperties.getProperty("verify.bdc.granted.functionality.openaccess"));
-		testPlan.verifyGrantedFunctionalityOnOpenAccess(reporter);
-		LOGGER.info(
-				"---------------------------------The test case verify if granted button next to subject is clicked  it opens Authorization page is completed-------------------------");
-
-	}	
-
-	
 	@Test (priority=36)
 	public void verify_subject_tooltip() throws Exception {
 		LOGGER.info(
@@ -551,7 +425,7 @@ public class TestDriver {
 				"---------------------------------The test case verify hovering over the study displays tool tip with the full name running is completed-------------------------");
 
 	}	
-
+*/
 	
 	
 @Test (priority=37)
@@ -564,7 +438,7 @@ public class TestDriver {
 				"---------------------------------The test case logout is completed-------------------------");
 
 	}
-*/
+
 
 	@AfterClass
 	public void closeApplication() {

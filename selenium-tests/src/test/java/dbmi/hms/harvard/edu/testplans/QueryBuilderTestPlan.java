@@ -1361,7 +1361,7 @@ public class QueryBuilderTestPlan extends Testplan {
 
 		try {
 			Assert.assertTrue(driver
-					.findElements(By.xpath("//span[contains(text(),'LOGIN') or contains(text(),'with eRA Commons')]"))
+					.findElements(By.xpath("//span[contains(text(),'Login with Google')]"))
 					.size() != 0, "Application by picsureui  logged out successfully");
 
 			SummaryStatisticsResults.class.newInstance().doAssertResultTrue(driver, testPlan, reporter);

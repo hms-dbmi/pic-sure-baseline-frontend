@@ -1,19 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Sanity Regression I2b2/TransmartUI" verbose="1">
+<suite name="Selenium Regression tet Run for PICSURE UI" verbose="1">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
-	<test name="i2b2 Sanity Test Cases">
+	<test name="Regression Test Cases">
 		<groups>
 			<run>
 		<!-- 	<include name="Sanity Regression" /> -->
+		
 			</run>
 		</groups>
 		<classes>
 			<!-- <class name="dbmi.hms.harvard.edu.testdrivers.TestDriver"> <methods> 
 				</methods> </class> -->
 			<class name="dbmi.hms.harvard.edu.testdrivers.TestDriver"></class>
+			 <methods>
+    <!--            <include name="verify_loading_of_PicsureUI" />
+               <include name="verify_successful_Loading_sessiondehydration" />
+	            <include name="verify_logout" /> 
+			<include name="verify_QueryBuilder_Editing" />
+     -->        </methods>
 		</classes>
 	</test>
 </suite>
