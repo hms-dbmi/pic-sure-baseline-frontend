@@ -1,0 +1,3 @@
+ name: Verify that logout works fine
+ url: https://nhanes-dev.hms.harvard.edu/psamaui/login
+ reporter: ConsoleReporter
